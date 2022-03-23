@@ -6,8 +6,15 @@
         <StackLayout>
             <Label 
                 Text="Cámara"
-                VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
+            <Image
+                Source="{Binding Picture}" />
+            <Button
+                Text="Tomar fotografía"
+                Command="{Binding TakePictureCommand}" />
+            <Button
+                Text="Seleccionar fotografía"
+                Command="{Binding SelectPictureCommand}" />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

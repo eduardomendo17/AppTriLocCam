@@ -36,13 +36,17 @@ namespace AppTriLocCam.ViewModels
         {
             try
             {
-                var location = await Geolocation.GetLastKnownLocationAsync();
+                var location = await Geolocation.GetLocationAsync(); //GetLastKnownLocationAsync();
                 if (location != null)
                 {
                     Latitude = location.Latitude;
                     Longitude = location.Longitude;
 
                     Console.WriteLine($"Latitude: {location.Latitude}, Longitude: {location.Longitude}, Altitude: {location.Altitude}");
+                }
+                else
+                {
+                    Application.Current.MainPage.DisplayAlert("AppTriLocCam", "No se pudo obtener la ubicación", "Ok");
                 }
             }
             catch (FeatureNotSupportedException fnsEx)

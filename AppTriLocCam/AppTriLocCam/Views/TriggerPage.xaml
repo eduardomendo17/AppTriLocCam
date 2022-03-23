@@ -7,7 +7,6 @@
         <StackLayout>
             <Label 
                 Text="Trigger"
-                VerticalOptions="CenterAndExpand" 
                 HorizontalOptions="CenterAndExpand" />
             <Entry
                 Placeholder="Introduce tu edad"
